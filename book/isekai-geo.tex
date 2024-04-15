@@ -1,0 +1,37 @@
+\documentclass{ctexbook}
+
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage[toc]{multitoc}
+\usepackage[hidelinks]{hyperref}
+
+\NewDocumentCommand\bookauthor{m}{
+    \gdef\theauthor{#1}
+    \hypersetup{pdfauthor=#1}
+}
+\NewDocumentCommand\booktitle{m}{
+    \gdef\thetitle{#1}
+    \hypersetup{pdftitle=#1}
+}
+\NewDocumentCommand\bookversion{m}{
+    \gdef\theversion{#1}
+}
+
+\booktitle{异世界地理基础}
+\bookversion{0.0.1}
+\bookauthor{zhengxyz123}
+
+\begin{document}
+    \pagestyle{empty}
+    \include{book/cover.tex}
+
+    \frontmatter
+    \pagestyle{headings}
+    \include{book/intro.tex}
+    \tableofcontents
+
+    \mainmatter
+    \include{book/planet.tex}
+    \include{book/creatures.tex}
+\end{document}

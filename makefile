@@ -1,6 +1,6 @@
-build: book/main.tex
-	@xelatex book/main.tex
-	@xelatex book/main.tex
+build: book/isekai-geo.tex
+	@xelatex book/isekai-geo.tex
+	@xelatex book/isekai-geo.tex
 
 clean:
-	-@rm *.aux book/*.aux *.log *.out
+	-@rm *.aux book/*.aux *.log *.out *.toc
